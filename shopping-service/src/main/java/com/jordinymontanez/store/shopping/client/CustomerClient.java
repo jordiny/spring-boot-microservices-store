@@ -1,7 +1,6 @@
 package com.jordinymontanez.store.shopping.client;
 
 import com.jordinymontanez.store.shopping.model.Customer;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +11,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface CustomerClient {
 
     @GetMapping(value = "/{id}")
-    @HystrixCommand
     public ResponseEntity<Customer> getCustomer(@PathVariable("id") long id);
 }
