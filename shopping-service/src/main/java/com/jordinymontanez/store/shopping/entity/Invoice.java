@@ -1,6 +1,7 @@
 package com.jordinymontanez.store.shopping.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.jordinymontanez.store.shopping.model.Customer;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -50,5 +51,8 @@ public class Invoice {
     public void prePersist() {
         this.createAt = new Date();
     }
+
+    @Transient
+    private Customer customer;
 
 }
