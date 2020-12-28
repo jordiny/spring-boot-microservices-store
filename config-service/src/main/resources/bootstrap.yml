@@ -5,6 +5,8 @@ server:
     include-binding-errors: always
 
 spring:
+  profiles:
+    active: dev
   cloud:
     config:
       server:
