@@ -8,6 +8,7 @@ import com.jordinymontanez.store.shopping.model.Product;
 import com.jordinymontanez.store.shopping.repository.InvoiceItemsRepository;
 import com.jordinymontanez.store.shopping.repository.InvoiceRepository;
 import com.jordinymontanez.store.shopping.entity.Invoice;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class InvoiceServiceImpl implements InvoiceService {
 
     @Autowired
@@ -26,11 +28,9 @@ public class InvoiceServiceImpl implements InvoiceService {
     @Autowired
     InvoiceItemsRepository invoiceItemsRepository;
 
-    @Autowired
-    CustomerClient customerClient;
 
-    @Autowired
-    ProductClient productClient;
+    private final CustomerClient customerClient;
+    private final ProductClient productClient;
 
     @Override
     public List<Invoice> findInvoiceAll() {

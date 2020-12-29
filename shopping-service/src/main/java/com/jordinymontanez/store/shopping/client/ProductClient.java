@@ -5,6 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/*@FeignClient(name = "product-service",fallback = ProductHystrixFallbackFactory.class)*/
 @FeignClient(name = "product-service")
 @RequestMapping(value = "/products")
 public interface ProductClient {

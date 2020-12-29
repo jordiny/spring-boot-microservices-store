@@ -3,7 +3,7 @@ package com.jordinymontanez.store.shopping.client;
 import com.jordinymontanez.store.shopping.model.Customer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-
+/*
 @Component
 public class CustomerHystrixFallbackFactory implements CustomerClient {
 
@@ -18,3 +18,4 @@ public class CustomerHystrixFallbackFactory implements CustomerClient {
         return ResponseEntity.ok(customer);
     }
 }
+*/
